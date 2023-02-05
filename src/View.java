@@ -41,9 +41,14 @@ public class View extends JFrame{
 
         //create a panel for the buttons
         JPanel buttonsPanel = new JPanel();
+        GridLayout buttonLayout = new GridLayout(1,3);
+        buttonsPanel.setLayout(buttonLayout);
         add = new JButton("add");
         view = new JButton("view");
         upload = new JButton("upload");
+        buttonsPanel.add(add);
+        buttonsPanel.add(view);
+        buttonsPanel.add(upload);
 
         //add the panels we want on the first "card"/view
         getContentPane().add(BorderLayout.NORTH, mainPanel);
